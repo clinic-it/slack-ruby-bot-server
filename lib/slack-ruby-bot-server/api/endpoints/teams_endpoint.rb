@@ -22,7 +22,7 @@ module SlackRubyBotServer
             optional :active, type: Boolean, desc: 'Return active teams only.'
             use :pagination
           end
-          sort Team::SORT_ORDERS
+          # sort Team::SORT_ORDERS
           get do
             teams = Team.all
             teams = teams.active if params[:active]
